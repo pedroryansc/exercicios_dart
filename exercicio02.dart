@@ -1,19 +1,19 @@
 import "dart:io";
 
-main(){
+main() {
   print("Votação da Cidade \n");
 
   print("Qual é a quantidade total de eleitores?");
-  int quantEleitores = int.parse(stdin.readLineSync());
+  int quantEleitores = int.parse(stdin.readLineSync()!);
 
   print("Qual é a quantidade de votos em branco?");
-  int votosBranco = int.parse(stdin.readLineSync());
+  int votosBranco = int.parse(stdin.readLineSync()!);
 
   print("Qual é a quantidade de votos nulos?");
-  int votosNulos = int.parse(stdin.readLineSync());
+  int votosNulos = int.parse(stdin.readLineSync()!);
 
   print("Qual é a quantidade de votos válidos?");
-  int votosValidos = int.parse(stdin.readLineSync());
+  int votosValidos = int.parse(stdin.readLineSync()!);
 
   double percVotosBranco = (votosBranco / quantEleitores) * 100;
 
@@ -21,7 +21,9 @@ main(){
 
   double percVotosValidos = (votosValidos / quantEleitores) * 100;
 
-  print("Percentual de votos em branco: $percVotosBranco%");
-  print("Percentual de votos nulos: $percVotosNulos%");
-  print("Percentual de votos válidos: $percVotosValidos%");
+  print(
+    "Percentual de votos em branco: ${percVotosBranco.toStringAsFixed(2)}%",
+  );
+  print("Percentual de votos nulos: ${percVotosNulos.toStringAsFixed(2)}%");
+  print("Percentual de votos válidos: ${percVotosValidos.toStringAsFixed(2)}%");
 }
