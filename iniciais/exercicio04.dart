@@ -13,6 +13,7 @@ main() {
   }
 
   num totalPesos = pesos.fold(0, (a, b) => a + b);
+
   double mediaPonderada =
       (notas[0] * pesos[0] + notas[1] * pesos[1] + notas[2] * pesos[2]) /
       totalPesos;
