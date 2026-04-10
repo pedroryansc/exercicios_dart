@@ -1,22 +1,23 @@
 import "dart:io";
 
-main(){
-  List numeros;
+main() {
+  List numeros = [];
 
-  for(int i = 1; i <= 10; i++){
+  for (int i = 1; i <= 10; i++) {
     stdout.write("$iº Número: ");
-    numeros.add(double.parse(stdin.readLineSync()!));
+    numeros.add(int.parse(stdin.readLineSync()!));
   }
 
+  bool par;
   String tipoNum;
 
   print("Números inseridos:");
-  for(int i = 0; i < numeros.lenght; i++){
+  for (int i = 0; i < numeros.length; i++) {
     par = numeros[i] % 2 == 0;
 
-    if(par){
+    if (par) {
       tipoNum = "Par";
-    } else{
+    } else {
       tipoNum = "Ímpar";
     }
 
